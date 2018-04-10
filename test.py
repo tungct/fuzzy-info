@@ -4,40 +4,49 @@ import time
 import math
 
 pygame.init()
-track = pygame.image.load("resources/images/map3.png")
+track = pygame.image.load("resources/images/map1.png")
 player = pygame.image.load("resources/images/cart.png")
-screen = pygame.display.set_mode((1366,768))
+screen = pygame.display.set_mode((1200,600))
 trackx= 0
 tracky= -1000
-xpos = 100
-ypos = 100
+xpos = 0
+ypos = 300
+
 keys=[False,False,False,False]
 direction = 0
 forward = 0
 
 running = 1
+check = 1
+
 while running:
     pygame.display.set_caption('driving')
     screen.fill(0)
+    if check == 1:
+        if keys[0]==True:
+            direction+= 2
+        if keys[1]==True:
+            direction-= 2
+        if keys[2]==True:
+            forward-= 0.2
+        if keys[3]==True and forward <= 0:
+            forward+= 0.2
 
-    if keys[0]==True:
-        direction+= 2
-    if keys[1]==True:
-        direction-= 2
-    if keys[2]==True:
-        forward-= 0.2
-    if keys[3]==True and forward <= 0:
-        forward+= 0.2
-    
-    movex=math.cos(direction/57.29)*forward
-    movey=math.sin(direction/57.29)*forward
-    trackx+=movex
-    tracky-=movey
+        movex=math.cos(direction/57.29)*forward
+        movey=math.sin(direction/57.29)*forward
+        trackx+=movex
 
-    playerrot = pygame.transform.rotate(player,direction)
-    screen.blit(track, (trackx,tracky))
-    screen.blit(playerrot, (xpos,ypos))
-    pygame.display.flip()
+        print("x ", trackx)
+        tracky-=movey
+        print("y ", tracky)
+
+        playerrot = pygame.transform.rotate(player,direction)
+        screen.blit(track, (trackx,tracky))
+        screen.blit(playerrot, (xpos,ypos))
+        pygame.display.flip()
+    if -100 < trackx + 3500 < 200 or -150 < tracky + 1550 < 100 or trackx > 100 or tracky > 450:
+        check = 0
+
     # time.sleep(0.015)
 
     for event in pygame.event.get():
