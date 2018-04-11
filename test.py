@@ -44,9 +44,8 @@ while running:
         screen.blit(track, (trackx,tracky))
         screen.blit(playerrot, (xpos,ypos))
         pygame.display.flip()
-    if -100 < trackx + 3500 < 200 or -150 < tracky + 1550 < 100 or trackx > 100 or tracky > 450:
+    if -100 < trackx + 3500 < 200 or -150 < tracky + 1550 < 100 or trackx > 100 or tracky > 350:
         check = 0
-
     # time.sleep(0.015)
 
     for event in pygame.event.get():
