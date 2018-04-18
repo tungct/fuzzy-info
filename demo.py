@@ -34,10 +34,7 @@ while running:
         movex=math.cos(direction/57.29)*forward
         movey=math.sin(direction/57.29)*forward
         xpos-=movex
-
-        print("x ", trackx)
         ypos+=movey
-        print("y ", tracky)
 
         playerrot = pygame.transform.rotate(player,direction)
         screen.blit(track, (trackx,tracky))
@@ -46,6 +43,7 @@ while running:
     # if -100 < trackx + 3500 < 200 or -150 < tracky + 1550 < 100 or trackx > 100 or tracky > 350:
     #     check = 0
     # time.sleep(0.015)
+
 
     for event in pygame.event.get():
     # check if the event is the X button
@@ -73,3 +71,9 @@ while running:
                 keys[2]=False
             elif event.key==pygame.K_DOWN:
                 keys[3]=False
+
+        if event.type == pygame.MOUSEBUTTONUP:
+            pos = pygame.mouse.get_pos()
+            print(pos)
+            xpos = pos[0]
+            ypos = pos[1]
