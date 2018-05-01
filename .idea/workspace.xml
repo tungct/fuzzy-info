@@ -2,26 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb9a61e3-8871-4141-b835-0b1e16b74028" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/xlttm/test.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xlttm/calc_drive.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xlttm/fuzzy/fuzzy_variable.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xlttm/rule/read_rule.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/xlttm/rule/var.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/demo.py" afterPath="$PROJECT_DIR$/demo.py" />
-      <change beforePath="$PROJECT_DIR$/resources/images/a.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/aaa.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/block.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/c.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/car.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/car4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/car_player.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/cart.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/map1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/map2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/map3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/images/track.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xlttm/dijsktra.py" afterPath="$PROJECT_DIR$/xlttm/dijsktra.py" />
+      <change beforePath="$PROJECT_DIR$/path.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/dijsktra.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/gray_image/gray_image.png" afterPath="$PROJECT_DIR$/xlttm/gray_image/gray_image.png" />
       <change beforePath="$PROJECT_DIR$/xlttm/hough_line/canny5.jpg" afterPath="$PROJECT_DIR$/xlttm/hough_line/canny5.jpg" />
       <change beforePath="$PROJECT_DIR$/xlttm/hough_line/hough.jpg" afterPath="$PROJECT_DIR$/xlttm/hough_line/hough.jpg" />
       <change beforePath="$PROJECT_DIR$/xlttm/hough_line/houghlines5.jpg" afterPath="$PROJECT_DIR$/xlttm/hough_line/houghlines5.jpg" />
-      <change beforePath="$PROJECT_DIR$/xlttm/image/1.png" afterPath="$PROJECT_DIR$/xlttm/image/1.png" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/0.png" afterPath="$PROJECT_DIR$/xlttm/image_scan/0.png" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/11.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/12.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/13.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/14.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/15.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/17.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/18.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/19.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/2.png" afterPath="$PROJECT_DIR$/xlttm/image_scan/2.png" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/20.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/21.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/22.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/23.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/24.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/25.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/26.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/27.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/28.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/29.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/30.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/m.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/map.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/image_scan/map_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/xlttm/process_image.py" afterPath="$PROJECT_DIR$/xlttm/process_image.py" />
+      <change beforePath="$PROJECT_DIR$/xlttm/test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,50 +51,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo.py">
+      <file leaf-file-name="calc_drive.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xlttm/calc_drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1962">
-              <caret line="114" column="39" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="114" selection-end-column="39" />
+            <state relative-caret-position="162">
+              <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dijsktra.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
+      <file leaf-file-name="fuzzy_variable.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xlttm/fuzzy/fuzzy_variable.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="319" column="31" lean-forward="false" selection-start-line="319" selection-start-column="31" selection-end-line="319" selection-end-column="31" />
-              <folding>
-                <element signature="e#141#176#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xlttm/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="822">
-              <caret line="143" column="21" lean-forward="true" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
-              <folding>
-                <element signature="e#140#175#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="t.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/t.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,6 +81,29 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mưa N</find>
+      <find>nàng N O</find>
+      <find>mấy L TIME</find>
+      <find>giờ N TIME</find>
+      <find>hnay V O</find>
+      <find>lạnh A WET</find>
+      <find>to A</find>
+      <find>có V</find>
+      <find>ạ I O</find>
+      <find>bắc_giang N LOC</find>
+      <find>nồm A</find>
+      <find>có V O</find>
+      <find>còn R O</find>
+      <find>Mai N</find>
+      <find />
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,8 +118,18 @@
         <option value="$PROJECT_DIR$/xlttm/process_image.py" />
         <option value="$PROJECT_DIR$/t.py" />
         <option value="$PROJECT_DIR$/demo.py" />
-        <option value="$PROJECT_DIR$/xlttm/dijsktra.py" />
         <option value="$PROJECT_DIR$/xlttm/test.py" />
+        <option value="$PROJECT_DIR$/xlttm/dijsktra.py" />
+        <option value="$PROJECT_DIR$/../chatterbot_nlp/crf/crf.py" />
+        <option value="$PROJECT_DIR$/../chatterbot_nlp/crf/tag_vtv.txt" />
+        <option value="$PROJECT_DIR$/xlttm/read_rule.py" />
+        <option value="$PROJECT_DIR$/xlttm/fuzzy_variable.py" />
+        <option value="$PROJECT_DIR$/xlttm/rule/read_rule.py" />
+        <option value="$PROJECT_DIR$/xlttm/rule/var.py" />
+        <option value="$PROJECT_DIR$/xlttm/ttt" />
+        <option value="$PROJECT_DIR$/xlttm/fuzzy/fuzzy_variable.py" />
+        <option value="$PROJECT_DIR$/xlttm/calc_drive.py" />
+        <option value="$PROJECT_DIR$/xlttm/dj.py" />
       </list>
     </option>
   </component>
@@ -128,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -140,24 +165,32 @@
             <path>
               <item name="fuzzy-info" type="b2602c69:ProjectViewProjectNode" />
               <item name="fuzzy-info" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="xlttm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fuzzy-info" type="b2602c69:ProjectViewProjectNode" />
               <item name="fuzzy-info" type="462c0819:PsiDirectoryNode" />
               <item name="xlttm" type="462c0819:PsiDirectoryNode" />
+              <item name="rule" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fuzzy-logic" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/xlttm/rule" />
+      <recent name="$PROJECT_DIR$/xlttm/fuzzy" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/xlttm/fuzzy" />
+      <recent name="$PROJECT_DIR$/xlttm" />
       <recent name="$PROJECT_DIR$/xlttm/image" />
     </key>
   </component>
@@ -173,20 +206,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dijsktra">
-    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dj">
+    <configuration name="calc_drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xlttm" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fuzzy-info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/calc_drive.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,7 +243,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="process_image (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dj" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -222,25 +255,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fuzzy-info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/process_image.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/dj.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="t" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="read_rule" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xlttm" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fuzzy-info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/t.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/rule/read_rule.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,19 +298,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.demo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.dijsktra" />
-      <item index="2" class="java.lang.String" itemvalue="Python.process_image (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.t" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.dijsktra" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dj" />
+      <item index="3" class="java.lang.String" itemvalue="Python.read_rule" />
+      <item index="4" class="java.lang.String" itemvalue="Python.calc_drive" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.dijsktra" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.demo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.t" />
-        <item index="4" class="java.lang.String" itemvalue="Python.process_image (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dj" />
+        <item index="1" class="java.lang.String" itemvalue="Python.calc_drive" />
+        <item index="2" class="java.lang.String" itemvalue="Python.read_rule" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dijsktra" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -298,19 +331,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="-4" width="1319" height="772" extended-state="6" />
+    <frame x="49" y="-4" width="1321" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16982563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25075075" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1936937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -324,111 +357,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/t.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="178" column="23" lean-forward="true" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="23" />
-          <folding>
-            <element signature="e#140#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4338">
-          <caret line="250" column="20" lean-forward="false" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="20" />
-          <folding>
-            <element signature="e#141#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="78" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4212">
-          <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-          <folding>
-            <element signature="e#141#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="78" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="162" column="39" lean-forward="false" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
-          <folding>
-            <element signature="e#141#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py" />
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -440,22 +375,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
           <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="78" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3762">
-          <caret line="209" column="11" lean-forward="false" selection-start-line="209" selection-start-column="11" selection-end-line="209" selection-end-column="11" />
-          <folding>
-            <element signature="e#141#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py" />
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
@@ -467,9 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -484,9 +404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,6 +487,28 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/car5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/traffic_lamp_red.png" />
+    <entry file="file://$PROJECT_DIR$/xlttm/test.py" />
+    <entry file="file://$PROJECT_DIR$/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="96" column="27" lean-forward="false" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py" />
+    <entry file="file://$PROJECT_DIR$/t.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -577,48 +516,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/car5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/traffic_lamp_red.png" />
-    <entry file="file://$PROJECT_DIR$/t.py">
+    <entry file="file://$PROJECT_DIR$/../chatterbot_nlp/crf/crf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo.py">
+    <entry file="file://$PROJECT_DIR$/../chatterbot_nlp/crf/tag_vtv.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
-          <caret line="114" column="39" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="114" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="18347" column="14" lean-forward="true" selection-start-line="18347" selection-start-column="14" selection-end-line="18347" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/test.py">
+    <entry file="file://$PROJECT_DIR$/xlttm/fuzzy_variable.py" />
+    <entry file="file://$PROJECT_DIR$/xlttm/rule/read_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="143" column="21" lean-forward="true" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
-          <folding>
-            <element signature="e#140#175#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/dijsktra.py">
+    <entry file="file://$PROJECT_DIR$/xlttm/path.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="319" column="31" lean-forward="false" selection-start-line="319" selection-start-column="31" selection-end-line="319" selection-end-column="31" />
+        <state relative-caret-position="-17333">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/rule/var.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/ttt" />
+    <entry file="file://$PROJECT_DIR$/xlttm/fuzzy/fuzzy_variable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/dj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="332" column="37" lean-forward="true" selection-start-line="332" selection-start-column="37" selection-end-line="332" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/calc_drive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
-            <element signature="e#141#176#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

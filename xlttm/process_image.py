@@ -35,7 +35,7 @@ def grayscale(file):
       
 def scan(file):
     count = 0
-    matrix = grayscale("./image/map_3.png")
+    matrix = grayscale("./image/m12.png")
     while count < 256 : 
         # lower_black = np.array([0,0,0], dtype = "uint16")
         # upper_black = np.array([count,count,count], dtype = "uint16")
@@ -75,4 +75,4 @@ def graph():
     nx.draw(G,pos)
     plt.show()
 
-CheckFile()
+scan("")
