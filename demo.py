@@ -70,7 +70,9 @@ while running:
         movey=math.sin(direction/57.29)*forward
         xpos-=movex
         ypos+=movey
-        print("xpos : ", xpos, "ypos : ", ypos)
+        print("forward : ", forward)
+        print("angle : ", direction)
+        print("xpos : ", movex, "ypos : ", movey)
 
         playerrot = pygame.transform.rotate(player,direction)
         screen.blit(track, (trackx,tracky))

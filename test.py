@@ -32,13 +32,13 @@ while running:
         if keys[3]==True and forward <= 0:
             forward+= 0.2
 
-        movex=math.cos(direction/57.29)*forward
-        movey=math.sin(direction/57.29)*forward
+        movex=-math.cos(direction/57.29)*forward
+        movey=-math.sin(direction/57.29)*forward
         trackx+=movex
 
-        print("x ", trackx)
+        print("x ", movex)
         tracky-=movey
-        print("y ", tracky)
+        print("y ", movey)
 
         playerrot = pygame.transform.rotate(player,direction)
         screen.blit(track, (trackx,tracky))

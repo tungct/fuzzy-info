@@ -1,4 +1,4 @@
-from xlttm.fuzzy import  fuzzy_variable
+from xlttm.fuzzy import fuzzy_variable
 from xlttm.rule import read_rule
 
 def check_var_fuzzy(angle):
@@ -19,7 +19,7 @@ def check_var_fuzzy(angle):
 
 def check_rule_fuzzy(angle):
     rule_use = []
-    rule = read_rule.read_impediment_rule()
+    rule = read_rule.read_impediment_angle_rule()
     var_fuzzy = check_var_fuzzy(angle)
     for i in range(len(var_fuzzy)):
         for j in range(len(rule)):
