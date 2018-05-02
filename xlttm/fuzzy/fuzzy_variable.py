@@ -106,8 +106,8 @@ def lamp_yellow(time):
 def lamp_green(time):
     if 5 <= time and time <= 7:
         return 1.0
-    elif 2 <= time and time <= 5:
-        return (time - 2) / 3.0
+    elif 1 <= time and time <= 5:
+        return (time - 1) / 4.0
     elif 7 <= time and time <= 10:
         return (10 - time) / 3.0
     else:
@@ -124,8 +124,8 @@ def lamp_more_green(time):
 def lamp_red(time):
     if -7 <= time and time <= -5:
         return 1.0
-    elif -5 <= time and time <= -2:
-        return (-time - 2) / 3.0
+    elif -5 <= time and time <= -1:
+        return (-time - 1) / 4.0
     elif -10 <= time and time <= -5:
         return (time + 10) / 3.0
     else:

@@ -11,6 +11,7 @@ player = pygame.image.load("resources/images/car5.png")
 tflamp = pygame.image.load("resources/images/green.png")
 tflamp2 = pygame.image.load("resources/images/yellow.png")
 tflamp3 = pygame.image.load("resources/images/red.png")
+stone = pygame.image.load("resources/images/stone.png")
 screen = pygame.display.set_mode((1200,686))
 trackx = 0
 tracky = 0
@@ -25,6 +26,7 @@ ylamp3 = 220
 keys=[False,False,False,False]
 direction = 0
 forward = 0
+xstone, ystone = 0, 0
 
 running = 1
 check = 1
@@ -70,13 +72,14 @@ while running:
         movey=math.sin(direction/57.29)*forward
         xpos-=movex
         ypos+=movey
-        print("forward : ", forward)
-        print("angle : ", direction)
-        print("xpos : ", movex, "ypos : ", movey)
+        # print("forward : ", forward)
+        # print("angle : ", direction)
+        # print("xpos : ", movex, "ypos : ", movey)
 
         playerrot = pygame.transform.rotate(player,direction)
         screen.blit(track, (trackx,tracky))
         screen.blit(playerrot, (xpos,ypos))
+        screen.blit(stone, (xstone, ystone))
 
         dt_ended = datetime.datetime.utcnow()
         if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.2):
@@ -152,5 +155,5 @@ while running:
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
             print(pos)
-            xpos = pos[0]
-            ypos = pos[1]
+            xstone = pos[0]
+            ystone = pos[1]

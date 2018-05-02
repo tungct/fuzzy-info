@@ -31,6 +31,11 @@ count = 0
 #             count = count + 1
 #             print(count , angle[i] + " - " + lamp[j] + " - " + distance[k])
 
+for i in range(len(distance)):
+    for j in range(len(drive)):
+        count = count + 1
+        print(count , distance[i] + " - " + drive[j])
+
 def distanceC(x1,y1,x2,y2):
     dist = math.hypot(x2 - x1, y2 - y1)
     return dist
@@ -42,6 +47,7 @@ ylamp2 = 350
 xlamp3 = 950
 ylamp3 = 220
 # 235 -450
+# 550 - 425
 # 1 - 30
 # 2 - 75
 # 3 - 70

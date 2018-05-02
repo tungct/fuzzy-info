@@ -26,3 +26,15 @@ def read_impediment_lamp_rule():
             impediment_rule.append((angle[i].strip(), lamp[i].strip(), distance[i].strip(), speed[i].strip()))
     return impediment_rule
 
+def read_impediment_stone_rule():
+    impediment_rule = []
+    with xlrd.open_workbook('./rule/rule_stone.xlsx') as book:
+        sheet = book.sheet_by_index(0)
+
+        angle = [x for x in sheet.col_values(1)]
+        distance = [y for y in sheet.col_values(2)]
+        speed = [z for z in sheet.col_values(3)]
+
+        for i in range(len(angle)):
+            impediment_rule.append((angle[i].strip(), distance[i].strip(), speed[i].strip()))
+    return impediment_rule

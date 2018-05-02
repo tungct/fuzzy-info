@@ -97,7 +97,7 @@ def calc_speed_lamp(angle, time, distance):
         speed = speed + angle_var * lamp_var * distance_var * speed_avg
     return speed
 
-print(calc_speed_lamp(-45,7,134))
+print(calc_speed_lamp(19,2,20))
 
 
 
