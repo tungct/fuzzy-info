@@ -35,8 +35,13 @@ def distanceC(x1,y1,x2,y2):
     dist = math.hypot(x2 - x1, y2 - y1)
     return dist
 
-xlamp = 550
-ylamp = 350
+xlamp = 250
+ylamp = 475
+xlamp2 = 550
+ylamp2 = 350
+xlamp3 = 950
+ylamp3 = 220
+# 235 -450
 # 1 - 30
 # 2 - 75
 # 3 - 70

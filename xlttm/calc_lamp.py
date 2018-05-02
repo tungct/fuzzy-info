@@ -1,7 +1,7 @@
 from xlttm.fuzzy import fuzzy_variable
 from xlttm.rule import read_rule
 
-def check_var_fuzzy_lamp(distance, time, angle):
+def check_var_fuzzy_lamp(angle, time, distance):
     var_fuzzy = []
     if fuzzy_variable.distance_near(distance) != 0.0:
         var_fuzzy.append("near")
@@ -32,10 +32,10 @@ def check_var_fuzzy_lamp(distance, time, angle):
 
     return var_fuzzy
 
-def check_rule_fuzzy_lamp(distance, time, angle):
+def check_rule_fuzzy_lamp(angle, time, distance):
     rule_use = []
     rule = read_rule.read_impediment_lamp_rule()
-    var_fuzzy = check_var_fuzzy_lamp(distance, time, angle)
+    var_fuzzy = check_var_fuzzy_lamp(angle, time, distance)
 
     for i in range(len(rule)):
         attr1, atrr2, attr3 = 0, 0, 0
@@ -51,10 +51,11 @@ def check_rule_fuzzy_lamp(distance, time, angle):
                 break
     return rule_use
 
-def calc_speed_lamp(distance, time, angle):
-    rules = check_rule_fuzzy_lamp(distance, time, angle)
-    speed = 0
+def calc_speed_lamp(angle, time, distance):
+    rules = check_rule_fuzzy_lamp(angle, time, distance)
     print(rules)
+    speed = 0
+    # print(rules)
     for i in range(len(rules)):
         if rules[i][0] == 'more_right':
             angle_var = fuzzy_variable.angle_more_right(angle)
@@ -86,16 +87,17 @@ def calc_speed_lamp(distance, time, angle):
             distance_var = fuzzy_variable.distance_far(distance)
 
         if rules[i][3] == 'slow':
-            speed_avg = 10.0
+            speed_avg = 0.0
         elif rules[i][3] == 'normal':
             speed_avg = 30.0
         elif rules[i][3] == 'fast':
             speed_avg = 65.0
+        # print(angle_var, lamp_var, distance_var, speed_avg)
 
         speed = speed + angle_var * lamp_var * distance_var * speed_avg
-        return speed
+    return speed
 
-print(calc_speed_lamp(20,5,0))
+print(calc_speed_lamp(-45,7,134))
 
 
 

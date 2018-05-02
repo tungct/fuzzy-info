@@ -259,7 +259,7 @@ def displayLamp(lampNow, timeLamp):
         timeLamp = 3
     elif lampNow == "yellow" and timeLamp == 0:
         lampNow = "red"
-        timeLamp = 15
+        timeLamp = 5
     return lampNow, timeLamp
 
 screen.blit(track, (trackx,tracky))
@@ -314,21 +314,44 @@ i = 1
 dir = 0
 j = 15
 angle = 0
+t1 = 0
+
+def convert_speed(speed):
+    return speed / 15.0
 
 while running:
     pygame.display.set_caption('driving')
     screen.fill(0)
     if check == 1:
+        if lamp1 == "red":
+            t1 = - timeLamp1
+        elif lamp1 == "green":
+            t1 = timeLamp1
+        elif lamp1 == "yellow":
+            t1 = - timeLamp1
+
+        # get nextNode in path
+        for j in range(len(pathNode)):
+            if xpos <= pathNode[j][0]:
+                i = j
+                break
+
         angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
         dir = xlttm.calc_drive.calc_drive(angle)
+        dis = distanceCoord(xpos, ypos, 235, 450)
+        if xpos < xlamp :
+            sp = xlttm.calc_lamp.calc_speed_lamp(-dir, t1, dis)
+            speed = convert_speed(sp)
+            print("i : ", i , " time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
 
-        movex = - math.cos(-dir / 57.29) * 1.0
-        movey = - math.sin(-dir / 57.29) * 1.0
-
+            movex = - math.cos(-dir / 57.29) * speed
+            movey = - math.sin(-dir / 57.29) * speed
+        else:
+            movex = - math.cos(-dir / 57.29) * 1.0
+            movey = - math.sin(-dir / 57.29) * 1.0
         xpos = xpos - movex
         ypos = ypos + movey
-        dis = distanceCoord(xpos, ypos, xlamp, ylamp)
-        rules = xlttm.calc_lamp.calc_speed_lamp(abs(dis - 30), timeLamp1, -dir)
+
 
         playerrot = pygame.transform.rotate(player,-dir)
         screen.blit(track, (trackx,tracky))
@@ -339,7 +362,7 @@ while running:
 
         screen.blit(playerrot, (xpos,ypos - 15))
         dt_ended = datetime.datetime.utcnow()
-        if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.05):
+        if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.1):
             dt_started = dt_ended
             timeLamp1 = timeLamp1 - 1
             timeLamp2 = timeLamp2 - 1
@@ -376,9 +399,9 @@ while running:
         label3 = lamp_font.render(str(timeLamp3), 1, (255, 255, 255))
         screen.blit(label3, (975, 225))
         pygame.display.flip()
-        dist = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
-        if dist >= 0.0 and dist <= 0.5:
-            i = i+1
+        # dist = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
+        # if dist >= 0.0 and dist <= 1:
+        #     i = i+1
 
 
     for event in pygame.event.get():

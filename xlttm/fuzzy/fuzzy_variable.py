@@ -94,12 +94,12 @@ def drive_more_left(angle):
         return 0.0
 
 def lamp_yellow(time):
-    if -2 <= time and time <= 2:
+    if time == 0:
         return 1.0
-    elif 2 <= time and time <= 5:
-        return (5 - time) / 3.0
-    elif -5 <= time and time <= -2:
-        return (time + 5) / 3.0
+    elif 0 <= time and time <= 2:
+        return (2 - time) / 2.0
+    elif -2 <= time and time <= 0:
+        return (time + 2) / 2.0
     else:
         return 0.0
 
