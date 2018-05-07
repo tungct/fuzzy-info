@@ -67,6 +67,7 @@ while running:
             forward-= 0.2
         if keys[3]==True and forward <= 0:
             forward+= 0.2
+        print("forward : ", forward, "direction : ", direction)
 
         movex=math.cos(direction/57.29)*forward
         movey=math.sin(direction/57.29)*forward

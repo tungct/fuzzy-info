@@ -29,12 +29,12 @@ def angle_more_left(angle):
         return 0.0
 
 def angle_right(angle):
-    if -35 <= angle and angle <=-15:
+    if -30 <= angle and angle <=-20:
         return 1.0
-    elif -15<= angle and angle <=-5:
-        return (-angle - 5)/ 10.0
-    elif -45 <= angle and angle <= -35:
-        return (angle + 45) / 10.0
+    elif -20<= angle and angle <=-5:
+        return (-angle - 5)/ 15.0
+    elif -45 <= angle and angle <= -30:
+        return (angle + 45) / 15.0
     else:
         return 0.0
 
@@ -184,7 +184,7 @@ def distance_normal(distance):
         return 0.0
 
 def distance_far(distance):
-    if distance >= 50:
+    if distance >= 50 and distance < 300:
         return 1.0
     elif 30 <= distance and distance <= 50:
         return (distance - 30) / 20.0

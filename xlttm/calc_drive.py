@@ -41,11 +41,17 @@ def calc_drive(angle):
             drive = drive + temp * angle_avg
         elif rules[i][0] == "more_left":
             temp = fuzzy_variable.angle_more_left(angle)
-            angle_avg = -45
+            if angle < 90:
+                angle_avg = -45
+            else:
+                angle_avg = -135
             drive = drive + temp * angle_avg
         elif rules[i][0] == "more_right":
             temp = fuzzy_variable.angle_more_right(angle)
-            angle_avg = 45
+            if angle > -90:
+                angle_avg = 45
+            else:
+                angle_avg = 135
             drive = drive + temp * angle_avg
         elif rules[i][0] == "normal":
             temp = fuzzy_variable.angle_normal(angle)
@@ -53,9 +59,7 @@ def calc_drive(angle):
             drive = drive + temp * angle_avg
     return drive
 
-
-
-
+print(calc_drive(-31))
 
 
 

@@ -53,9 +53,8 @@ def check_rule_fuzzy_lamp(angle, time, distance):
 
 def calc_speed_lamp(angle, time, distance):
     rules = check_rule_fuzzy_lamp(angle, time, distance)
-    print(rules)
     speed = 0
-    # print(rules)
+    print(rules)
     for i in range(len(rules)):
         if rules[i][0] == 'more_right':
             angle_var = fuzzy_variable.angle_more_right(angle)
@@ -97,7 +96,7 @@ def calc_speed_lamp(angle, time, distance):
         speed = speed + angle_var * lamp_var * distance_var * speed_avg
     return speed
 
-print(calc_speed_lamp(19,2,20))
+# print(calc_speed_lamp(19,2,20))
 
 
 

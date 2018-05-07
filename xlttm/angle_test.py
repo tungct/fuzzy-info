@@ -12,7 +12,6 @@ import datetime
 import math
 import xlttm.calc_drive
 import xlttm.calc_lamp
-import xlttm.calc_stone
 
 PI = math.pi
 np.set_printoptions(threshold='nan')
@@ -49,11 +48,11 @@ def Convert():
         if (temp_list[i][0] + 4) % 5 == 0:
             final_node.append(temp_list[i])
         i+=1
-    j = 0    
+    j = 0
     while j < len(temp_list_1):
         if (temp_list_1[j][1] + 1) % 2 == 0 and CheckList(temp_list_1[j],final_node) == False:
             final_node.append(temp_list_1[j])
-        j+=1    
+        j+=1
     print(len(final_node) )
     return final_node
 
@@ -196,7 +195,7 @@ def compareCoord(x, y):
     for i in range(len(list_node)):
         disx = abs(x - list_node[i][0])
         disy = abs(y - list_node[i][1])
-        if disx < 30 and disy < 30:
+        if disx < 20 and disy < 20:
             xp = list_node[i][0]
             yp = list_node[i][1]
             break
@@ -220,8 +219,7 @@ dotend = pygame.image.load("./im/loc.png")
 tflamp = pygame.image.load("./im/green.png")
 tflamp2 = pygame.image.load("./im/yellow.png")
 tflamp3 = pygame.image.load("./im/red.png")
-stone = pygame.image.load("./im/stone.png")
-# dot = []
+dot = []
 # for i in range(50):
 #     temp = pygame.image.load("./im/loc.png")
 #     dot.append(temp)
@@ -237,19 +235,13 @@ xbegin = 0
 ybegin = 0
 xend = 0
 yend = 0
-xstone, ystone = 0, 0
-check_stone = 0
 direction = 0
 running = 1
 check = 1
 i = 0
-# xlamp = 250
-# ylamp = 475
-xlamp = 200
-ylamp = 500
-# xlamp2 = 550
-# ylamp2 = 350
-xlamp2 = 400
+xlamp = 250
+ylamp = 475
+xlamp2 = 550
 ylamp2 = 350
 xlamp3 = 950
 ylamp3 = 220
@@ -267,7 +259,7 @@ def displayLamp(lampNow, timeLamp):
         timeLamp = 3
     elif lampNow == "yellow" and timeLamp == 0:
         lampNow = "red"
-        timeLamp = 5
+        timeLamp = 15
     return lampNow, timeLamp
 
 screen.blit(track, (trackx,tracky))
@@ -306,10 +298,13 @@ while running:
 pathDriver = getPath([xbegin,ybegin],[xend, yend],list_node)
 pathNode = []
 
-for k in range(len(pathDriver) - 1):
-    if k%15 == 0:
+for k in range(len(pathDriver)-1):
+    if k%10 == 0:
         pathNode.append(pathDriver[k])
-
+pathNode.append(pathDriver[len(pathDriver) - 1])
+for i in range(len(pathNode)):
+    temp = pygame.image.load("./im/loc.png")
+    dot.append(temp)
 timeLamp1 = initTimeLamp()
 timeLamp2 = initTimeLamp()
 timeLamp3 = initTimeLamp()
@@ -321,150 +316,62 @@ running = 1
 i = 1
 dir = 0
 j = 15
+angle = 0
 angle_past = 0
-t1 = 0
-
-def convert_speed(speed):
-    return speed / 15.0
-
+flag = 0
 while running:
     pygame.display.set_caption('driving')
     screen.fill(0)
+    if pathNode[len(pathNode) - 1][0] > pathNode[len(pathNode) - 2][0]:
+        flag = 1
     if check == 1:
-        # get nextNode in path
+
+
+        # angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
+
+
         for j in range(len(pathNode)):
-            if xpos <= pathNode[j][0]:
-                i = j
-                break
-        dis_end = distanceCoord(xpos, ypos, pathNode[len(pathNode) -1][0], pathNode[len(pathNode)-1][1])
-        if dis_end >= 5 and dis_end <10:
-            break
-
+            dis_temp = distanceCoord(xpos, ypos, pathNode[j][0], pathNode[j][1])
+            if flag == 1:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = j
+                        break
+                elif angle > 90:
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    if dis_temp > 0 and dis_temp < 2:
+                        i = i + 1
+                        break
+            else:
+                if xpos <= pathNode[j][0]:
+                    i = j
+                    break
         angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
-        # if angle > 90:
-        #     angle = angle - 180
         dir = xlttm.calc_drive.calc_drive(angle_past - angle)
-        print("angle : ", angle, " dir : ", dir, " angle_past : ", angle_past)
+        print("angle : ", angle, " anglePast : ", angle_past, " dir : ", dir, "i : ", i)
 
-        if xstone == 0 and ystone == 0:
-            if xpos < xlamp - 5:
-                # dis = distanceCoord(xpos, ypos, 235, 450)
-                dis = distanceCoord(xpos, ypos, 175, 475)
-                if lamp1 == "red":
-                    t1 = - timeLamp1
-                elif lamp1 == "green":
-                    t1 = timeLamp1
-                elif lamp1 == "yellow":
-                    t1 = timeLamp1 - 1.5
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past - angle, t1, dis)
-                speed = convert_speed(sp)
-                print(" time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            elif xpos > xlamp and xpos < xlamp2 - 5 and distanceCoord(xpos, ypos, 400, 425) < 200:
-                # dis = distanceCoord(xpos, ypos, 550, 425)
-                dis = distanceCoord(xpos, ypos, 400, 425)
-                if lamp2 == "red":
-                    t1 = - timeLamp2
-                elif lamp2 == "green":
-                    t1 = timeLamp2
-                elif lamp2 == "yellow":
-                    t1 = timeLamp2 - 1.5
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past - angle, t1, dis)
-                speed = convert_speed(sp)
-                print(" time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            elif xpos > xlamp2 and xpos < xlamp3 - 5 and distanceCoord(xpos, ypos, 950, 300) < 200:
-                dis = distanceCoord(xpos, ypos, 950, 300)
-                if lamp3 == "red":
-                    t1 = - timeLamp3
-                elif lamp3 == "green":
-                    t1 = timeLamp3
-                elif lamp3 == "yellow":
-                    t1 = timeLamp3 - 1.5
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past - angle, t1, dis)
-                speed = convert_speed(sp)
-                print(" time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            else:
-                movex = - math.cos(angle / 57.29) * 2.0
-                movey = - math.sin(angle / 57.29) * 2.0
-        elif xstone != 0 and ystone != 0:
-            if xpos < xlamp and xlamp < xstone :
-                # dis = distanceCoord(xpos, ypos, 235, 450)
-                dis = distanceCoord(xpos, ypos, 175, 475)
-                if lamp1 == "red":
-                    t1 = - timeLamp1
-                elif lamp1 == "green":
-                    t1 = timeLamp1
-                elif lamp1 == "yellow":
-                    t1 = timeLamp1 - 2
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past - angle, t1, dis)
-                speed = convert_speed(sp)
-                # print("i : ", i, " time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            elif xpos > xlamp and xpos < xlamp2 and xlamp2 < xstone:
-                # dis = distanceCoord(xpos, ypos, 550, 425)
-                dis = distanceCoord(xpos, ypos, 400, 425)
-                if lamp2 == "red":
-                    t1 = - timeLamp2
-                elif lamp2 == "green":
-                    t1 = timeLamp2
-                elif lamp2 == "yellow":
-                    t1 = timeLamp2 - 2
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past -angle, t1, dis)
-                speed = convert_speed(sp)
-                # print("i : ", i, " time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            elif xpos > xlamp2 and xpos < xlamp3 and xlamp3 < xstone:
-                dis = distanceCoord(xpos, ypos, 950, 300)
-                if lamp3 == "red":
-                    t1 = - timeLamp3
-                elif lamp3 == "green":
-                    t1 = timeLamp3
-                elif lamp3 == "yellow":
-                    t1 = timeLamp3 - 2
-                sp = xlttm.calc_lamp.calc_speed_lamp(angle_past -angle, t1, dis)
-                speed = convert_speed(sp)
-                # print("i : ", i, " time : ", t1, " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            elif distanceCoord(xpos, ypos, xstone, ystone) < 150:
-                dis = distanceCoord(xpos, ypos, xstone - 20, ystone)
-                sp = xlttm.calc_stone.calc_speed_stone(dis -20, -dir)
-                speed = convert_speed(sp)
-                # print("i : ", i , " angle : ", -dir, " dis : ", dis, " speed : ", sp)
-
-                movex = - math.cos(angle / 57.29) * speed
-                movey = - math.sin(angle / 57.29) * speed
-            else:
-                movex = - math.cos(-dir / 57.29) * 1.0
-                movey = - math.sin(-dir / 57.29) * 1.0
+        movex = - math.cos(angle / 57.29) * 2.5
+        movey = - math.sin(angle / 57.29) * 2.5
         xpos = xpos - movex
         ypos = ypos + movey
-
+        dis = distanceCoord(xpos, ypos, xlamp, ylamp)
+        print("x : ", xpos, " y : ", ypos -15, "dot_i : ", pathNode[i])
+        # rules = xlttm.calc_lamp.calc_speed_lamp(abs(dis - 30), timeLamp1, -dir)
 
         playerrot = pygame.transform.rotate(player,angle_past + dir)
-        angle_past = angle
+        angle_past = angle_past + dir
         screen.blit(track, (trackx,tracky))
         screen.blit(dotbegin, (xbegin, ybegin))
         screen.blit(dotend, (xend, yend))
-        if xstone != 0 and ystone != 0:
-            screen.blit(stone, (xstone, ystone -20))
+        for k in range(len(pathNode)):
+            screen.blit(dot[k], (pathNode[k][0], pathNode[k][1]))
 
         screen.blit(playerrot, (xpos,ypos - 15))
         dt_ended = datetime.datetime.utcnow()
-        if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.1):
+        if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.05):
             dt_started = dt_ended
             timeLamp1 = timeLamp1 - 1
             timeLamp2 = timeLamp2 - 1
@@ -495,28 +402,26 @@ while running:
         lamp_font = pygame.font.SysFont(None, 25)
         # render text
         label = lamp_font.render(str(timeLamp1), 1, (255, 255, 255))
-        screen.blit(label, (225, 500))
+        screen.blit(label, (275, 500))
         label2 = lamp_font.render(str(timeLamp2), 1, (255, 255, 255))
-        screen.blit(label2, (450, 375))
+        screen.blit(label2, (525, 375))
         label3 = lamp_font.render(str(timeLamp3), 1, (255, 255, 255))
         screen.blit(label3, (975, 225))
         pygame.display.flip()
-
-        for event in pygame.event.get():
-        # check if the event is the X button
-            if event.type==pygame.QUIT:
-                # if it is quit the game
-                pygame.quit()
-                exit(0)
-
-            if event.type == pygame.MOUSEBUTTONUP:
-                pos = pygame.mouse.get_pos()
-                if check_stone == 0:
-                    xstone, ystone = compareCoord(pos[0], pos[1])
-                    check_stone = 1
-                else:
-                    check_stone = 0
-                    xstone = 0
-                    ystone = 0
+        dist = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
+        # if dist >= 0.0 and dist <= 0.5:
+        #     i = i+1
 
 
+    for event in pygame.event.get():
+    # check if the event is the X button
+        if event.type==pygame.QUIT:
+            # if it is quit the game
+            pygame.quit()
+            exit(0)
+
+        if event.type == pygame.MOUSEBUTTONUP:
+            pos = pygame.mouse.get_pos()
+            # print(pos)
+            xx = pos[0]
+            yy = pos[1]

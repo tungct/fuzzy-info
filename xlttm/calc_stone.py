@@ -41,7 +41,6 @@ def check_rule_fuzzy_stone(distance, angle):
 
 def calc_speed_stone(distance, angle):
     rules = check_rule_fuzzy_stone(distance, angle)
-    print(rules)
     speed = 0
     for i in range(len(rules)):
         if rules[i][1] == 'more_right':
@@ -73,7 +72,7 @@ def calc_speed_stone(distance, angle):
         speed = speed + angle_var  * distance_var * speed_avg
     return speed
 
-print(calc_speed_stone(15,55))
+# print(calc_speed_stone(15,55))
 
 
 
