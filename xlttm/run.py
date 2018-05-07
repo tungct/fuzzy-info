@@ -309,7 +309,6 @@ pathNode = []
 for k in range(len(pathDriver) - 1):
     if k%15 == 0:
         pathNode.append(pathDriver[k])
-
 timeLamp1 = initTimeLamp()
 timeLamp2 = initTimeLamp()
 timeLamp3 = initTimeLamp()
@@ -321,23 +320,43 @@ running = 1
 i = 1
 dir = 0
 j = 15
+angle = 0
 angle_past = 0
 t1 = 0
-
+flag = 0
+if pathNode[0][0] > pathNode[1][0]:
+    flag = 1
+print("flag : ", flag)
 def convert_speed(speed):
     return speed / 15.0
 
 while running:
     pygame.display.set_caption('driving')
     screen.fill(0)
+
     if check == 1:
         # get nextNode in path
         for j in range(len(pathNode)):
-            if xpos <= pathNode[j][0]:
-                i = j
-                break
+            dis_temp = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
+            if flag == 1:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = j
+                        break
+                elif angle > 90:
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    if dis_temp > 0 and dis_temp < 2:
+                        i = i + 1
+                        break
+            else:
+                if xpos <= pathNode[j][0]:
+                    i = j
+                    break
         dis_end = distanceCoord(xpos, ypos, pathNode[len(pathNode) -1][0], pathNode[len(pathNode)-1][1])
-        if dis_end >= 5 and dis_end <10:
+        if dis_end >= 0 and dis_end <2:
             break
 
         angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
@@ -452,10 +471,11 @@ while running:
                 movey = - math.sin(-dir / 57.29) * 1.0
         xpos = xpos - movex
         ypos = ypos + movey
+        print("x : ", xpos, "y : ", ypos, pathNode[i])
 
 
         playerrot = pygame.transform.rotate(player,angle_past + dir)
-        angle_past = angle
+        angle_past = angle_past + dir
         screen.blit(track, (trackx,tracky))
         screen.blit(dotbegin, (xbegin, ybegin))
         screen.blit(dotend, (xend, yend))
@@ -518,5 +538,3 @@ while running:
                     check_stone = 0
                     xstone = 0
                     ystone = 0
-
-

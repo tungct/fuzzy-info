@@ -319,11 +319,13 @@ j = 15
 angle = 0
 angle_past = 0
 flag = 0
+if (pathNode[0][0] > pathNode[1][0]):
+    flag = 1
+print("flag : ", flag)
 while running:
     pygame.display.set_caption('driving')
     screen.fill(0)
-    if pathNode[len(pathNode) - 1][0] > pathNode[len(pathNode) - 2][0]:
-        flag = 1
+
     if check == 1:
 
 
