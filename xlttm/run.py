@@ -267,7 +267,7 @@ def displayLamp(lampNow, timeLamp):
         timeLamp = 3
     elif lampNow == "yellow" and timeLamp == 0:
         lampNow = "red"
-        timeLamp = 5
+        timeLamp = 10
     return lampNow, timeLamp
 
 screen.blit(track, (trackx,tracky))
@@ -326,6 +326,10 @@ t1 = 0
 flag = 0
 if pathNode[0][0] > pathNode[1][0]:
     flag = 1
+if (pathNode[0][0] > pathNode[len(pathNode) - 1][0]):
+    flag = 2
+if (pathNode[0][1] < pathNode[len(pathNode)-1][1]):
+    flag = 3
 print("flag : ", flag)
 def convert_speed(speed):
     return speed / 15.0
@@ -336,19 +340,50 @@ while running:
 
     if check == 1:
         # get nextNode in path
+        dis_temp = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
         for j in range(len(pathNode)):
-            dis_temp = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
+
             if flag == 1:
                 if angle < -90:
+                    print("< - 90")
                     if ypos < pathNode[j][1]:
                         i = j
+                        break
+                elif angle > 90:
+                    print("> 90")
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    "else"
+                    if dis_temp > 0 and dis_temp < 2:
+                        i = i + 1
+                        break
+            elif flag == 2:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = i
                         break
                 elif angle > 90:
                     if ypos > pathNode[j][1]:
                         i = j
                         break
                 else:
-                    if dis_temp > 0 and dis_temp < 2:
+                    if dis_temp > 0 and dis_temp < 3:
+                        i = i + 1
+                        break
+            elif flag == 3:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = i
+                        break
+                elif angle > 90:
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    print("else 2")
+                    if dis_temp > 0 and dis_temp < 3:
                         i = i + 1
                         break
             else:
@@ -356,7 +391,7 @@ while running:
                     i = j
                     break
         dis_end = distanceCoord(xpos, ypos, pathNode[len(pathNode) -1][0], pathNode[len(pathNode)-1][1])
-        if dis_end >= 0 and dis_end <2:
+        if dis_end >= 0 and dis_end <1:
             break
 
         angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
@@ -366,7 +401,7 @@ while running:
         print("angle : ", angle, " dir : ", dir, " angle_past : ", angle_past)
 
         if xstone == 0 and ystone == 0:
-            if xpos < xlamp - 5:
+            if xpos < xlamp - 7:
                 # dis = distanceCoord(xpos, ypos, 235, 450)
                 dis = distanceCoord(xpos, ypos, 175, 475)
                 if lamp1 == "red":
@@ -411,8 +446,8 @@ while running:
                 movex = - math.cos(angle / 57.29) * speed
                 movey = - math.sin(angle / 57.29) * speed
             else:
-                movex = - math.cos(angle / 57.29) * 2.0
-                movey = - math.sin(angle / 57.29) * 2.0
+                movex = - math.cos(angle / 57.29) * 1.5
+                movey = - math.sin(angle / 57.29) * 1.5
         elif xstone != 0 and ystone != 0:
             if xpos < xlamp and xlamp < xstone :
                 # dis = distanceCoord(xpos, ypos, 235, 450)
@@ -482,7 +517,7 @@ while running:
         if xstone != 0 and ystone != 0:
             screen.blit(stone, (xstone, ystone -20))
 
-        screen.blit(playerrot, (xpos,ypos - 15))
+        screen.blit(playerrot, (xpos - 10,ypos - 15))
         dt_ended = datetime.datetime.utcnow()
         if ((dt_ended - dt_started).total_seconds() > 1.0) and ((dt_ended - dt_started).total_seconds() < 1.1):
             dt_started = dt_ended

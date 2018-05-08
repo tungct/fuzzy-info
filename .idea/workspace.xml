@@ -4,6 +4,7 @@
     <list default="true" id="cb9a61e3-8871-4141-b835-0b1e16b74028" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/xlttm/angle_test.py" afterPath="$PROJECT_DIR$/xlttm/angle_test.py" />
+      <change beforePath="$PROJECT_DIR$/xlttm/rule/rule_lamp.xlsx" afterPath="$PROJECT_DIR$/xlttm/rule/rule_lamp.xlsx" />
       <change beforePath="$PROJECT_DIR$/xlttm/run.py" afterPath="$PROJECT_DIR$/xlttm/run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file leaf-file-name="calc_drive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xlttm/calc_drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="1062">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -30,8 +31,8 @@
       <file leaf-file-name="angle_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xlttm/angle_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-342">
-              <caret line="339" column="29" lean-forward="true" selection-start-line="339" selection-start-column="29" selection-end-line="339" selection-end-column="29" />
+            <state relative-caret-position="275">
+              <caret line="386" column="25" lean-forward="true" selection-start-line="337" selection-start-column="8" selection-end-line="386" selection-end-column="25" />
               <folding>
                 <element signature="e#140#150#0" expanded="true" />
               </folding>
@@ -42,8 +43,18 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xlttm/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="372" column="36" lean-forward="true" selection-start-line="372" selection-start-column="36" selection-end-line="372" selection-end-column="36" />
+            <state relative-caret-position="162">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calc_lamp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xlttm/calc_lamp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,6 +168,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -224,7 +235,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="calc_stone" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calc_lamp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -236,7 +247,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fuzzy-info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/calc_stone.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlttm/calc_lamp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,18 +291,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.calc_stone" />
-      <item index="2" class="java.lang.String" itemvalue="Python.angle_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.calc_drive" />
-      <item index="4" class="java.lang.String" itemvalue="Python.demo" />
+      <item index="1" class="java.lang.String" itemvalue="Python.angle_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.calc_drive" />
+      <item index="3" class="java.lang.String" itemvalue="Python.demo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.calc_lamp" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.run" />
         <item index="1" class="java.lang.String" itemvalue="Python.angle_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.calc_drive" />
-        <item index="3" class="java.lang.String" itemvalue="Python.demo" />
-        <item index="4" class="java.lang.String" itemvalue="Python.calc_stone" />
+        <item index="2" class="java.lang.String" itemvalue="Python.calc_lamp" />
+        <item index="3" class="java.lang.String" itemvalue="Python.calc_drive" />
+        <item index="4" class="java.lang.String" itemvalue="Python.demo" />
       </list>
     </recent_temporary>
   </component>
@@ -318,13 +329,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15617892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25525525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23873875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -507,19 +518,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlttm/calc_lamp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xlttm/fuzzy/fuzzy_variable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="186" column="40" lean-forward="false" selection-start-line="186" selection-start-column="40" selection-end-line="186" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,24 +529,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xlttm/calc_drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="1062">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xlttm/calc_lamp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/xlttm/angle_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="339" column="29" lean-forward="true" selection-start-line="339" selection-start-column="29" selection-end-line="339" selection-end-column="29" />
+        <state relative-caret-position="275">
+          <caret line="386" column="25" lean-forward="true" selection-start-line="337" selection-start-column="8" selection-end-line="386" selection-end-column="25" />
           <folding>
             <element signature="e#140#150#0" expanded="true" />
           </folding>
@@ -553,8 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xlttm/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="372" column="36" lean-forward="true" selection-start-line="372" selection-start-column="36" selection-end-line="372" selection-end-column="36" />
+        <state relative-caret-position="162">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>

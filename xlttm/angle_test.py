@@ -299,7 +299,7 @@ pathDriver = getPath([xbegin,ybegin],[xend, yend],list_node)
 pathNode = []
 
 for k in range(len(pathDriver)-1):
-    if k%10 == 0:
+    if k%15 == 0:
         pathNode.append(pathDriver[k])
 pathNode.append(pathDriver[len(pathDriver) - 1])
 for i in range(len(pathNode)):
@@ -321,6 +321,10 @@ angle_past = 0
 flag = 0
 if (pathNode[0][0] > pathNode[1][0]):
     flag = 1
+if (pathNode[0][0] > pathNode[len(pathNode) - 1][0]):
+    flag = 2
+if (pathNode[0][1] < pathNode[len(pathNode)-1][1]):
+    flag = 3
 print("flag : ", flag)
 while running:
     pygame.display.set_caption('driving')
@@ -331,20 +335,50 @@ while running:
 
         # angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
 
-
+        dis_temp = distanceCoord(xpos, ypos, pathNode[i][0], pathNode[i][1])
         for j in range(len(pathNode)):
-            dis_temp = distanceCoord(xpos, ypos, pathNode[j][0], pathNode[j][1])
+
             if flag == 1:
                 if angle < -90:
+                    print("< - 90")
                     if ypos < pathNode[j][1]:
                         i = j
+                        break
+                elif angle > 90:
+                    print("> 90")
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    "else"
+                    if dis_temp > 0 and dis_temp < 2:
+                        i = i + 1
+                        break
+            elif flag ==2:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = i
                         break
                 elif angle > 90:
                     if ypos > pathNode[j][1]:
                         i = j
                         break
                 else:
-                    if dis_temp > 0 and dis_temp < 2:
+                    if dis_temp > 0 and dis_temp < 3:
+                        i = i + 1
+                        break
+            elif flag ==3:
+                if angle < -90:
+                    if ypos < pathNode[j][1]:
+                        i = i
+                        break
+                elif angle > 90:
+                    if ypos > pathNode[j][1]:
+                        i = j
+                        break
+                else:
+                    print("else 2")
+                    if dis_temp > 0 and dis_temp < 3:
                         i = i + 1
                         break
             else:
@@ -353,7 +387,7 @@ while running:
                     break
         angle = calculate_angle(xpos, ypos, pathNode[i][0], pathNode[i][1])
         dir = xlttm.calc_drive.calc_drive(angle_past - angle)
-        print("angle : ", angle, " anglePast : ", angle_past, " dir : ", dir, "i : ", i)
+        print("angle : ", angle, " anglePast : ", angle_past, " dir : ", dir, "i : ", i, "dis : ", dis_temp)
 
         movex = - math.cos(angle / 57.29) * 2.5
         movey = - math.sin(angle / 57.29) * 2.5
